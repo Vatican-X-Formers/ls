@@ -3,9 +3,9 @@
 lr=2.5e-4
 warmup=10000
 iters=430000
-csize=32
+csize=128
 crank=1
-bsize=4
+bsize=1
 memlen=2048
 tps=2048
 wlen=512
