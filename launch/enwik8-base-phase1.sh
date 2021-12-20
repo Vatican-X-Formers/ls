@@ -19,7 +19,7 @@ task=enwik8
 
 expname=${task}-base-phase1
 
-export OMP_NUM_THREADS=4
+export OMP_NUM_THREADS=1
 
 # It is important to set --num-workers to larger values for the speed on text8.
 # A good practice is to set it to (num_cpu_cores / num_gpus)
