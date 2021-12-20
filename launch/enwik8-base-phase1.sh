@@ -19,12 +19,12 @@ task=enwik8
 
 expname=${task}-base-phase1
 
-export OMP_NUM_THREADS=8
+export OMP_NUM_THREADS=4
 
 # It is important to set --num-workers to larger values for the speed on text8.
 # A good practice is to set it to (num_cpu_cores / num_gpus)
 # Note: we need 8 V100 GPUs with 32GB memory
-CUDA_VISIBLE_DEVICES=0 fairseq-train \
+fairseq-train \
     datasets/${task}/data-bin/ \
     --user-dir ./model_lib \
     --fp16 --fp16-no-flatten-grads \
@@ -39,6 +39,6 @@ CUDA_VISIBLE_DEVICES=0 fairseq-train \
     --chunk-size ${csize} --chunk-rank ${crank} \
     --update-freq ${update_freq} \
     --criterion char_level_lm_loss  --pre-ln --use-gelu \
-    --num-workers 8 \
+    --num-workers 4 \
     --seed 2  --log-interval 25 \
 
