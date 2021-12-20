@@ -3,7 +3,7 @@
 lr=2.5e-4
 warmup=10000
 iters=430000
-csize=16
+csize=32
 crank=1
 bsize=4
 memlen=2048
@@ -27,7 +27,6 @@ export OMP_NUM_THREADS=1
 fairseq-train \
     datasets/${task}/data-bin/ \
     --user-dir ./model_lib \
-    --fp16 --fp16-no-flatten-grads \
     --task truncated_bptt_lm --arch transformer-ls \
     --n-layer 12 --d-model 512 --n-head 8 --d-inner 2048 --dropout ${dp} --emb-dropout ${dp} \
     --tokens-per-sample ${tps} --mem-len ${memlen} --window-len ${wlen} \
