@@ -39,6 +39,6 @@ fairseq-train \
     --chunk-size ${csize} --chunk-rank ${crank} \
     --update-freq ${update_freq} \
     --criterion char_level_lm_loss  --pre-ln --use-gelu \
-    --num-workers 4 \
+    --num-workers 0 \
     --seed 2  --log-interval 25 \
 
