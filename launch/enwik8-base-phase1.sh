@@ -13,7 +13,7 @@ wlen=512
 wd=0.01
 dp=0.2
 
-update_freq=2
+update_freq=8
 
 task=enwik8
 
