@@ -5,7 +5,7 @@ warmup=10000
 iters=430000
 csize=32
 crank=1
-bsize=4
+bsize=1
 memlen=2048
 tps=2048
 wlen=512
@@ -13,7 +13,7 @@ wlen=512
 wd=0.01
 dp=0.2
 
-update_freq=16
+update_freq=4
 
 task=enwik8
 
